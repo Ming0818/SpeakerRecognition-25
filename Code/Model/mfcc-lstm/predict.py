@@ -5,10 +5,10 @@ import csv
 import os
 from OtUtils import read_wave, get_mfcc, enhance_speach
 
-test_data_path = 'D:/Documents/SpeakerRecognition/data/voiceprint-test-a/'
+test_data_path = 'D:/Documents/SpeakerRecognition/data/voiceprint-test-b/'
 
-source_file_path = 'D:/Documents/SpeakerRecognition/data/voiceprint-test-a/data/'
-enhance_file_path = 'D:/Documents/SpeakerRecognition/data/voiceprint-test-a/enhance/'
+source_file_path = 'D:/Documents/SpeakerRecognition/data/voiceprint-test-b/data/'
+enhance_file_path = 'D:/Documents/SpeakerRecognition/data/voiceprint-test-b/enhance/'
 
 file_names = os.listdir(source_file_path)
 
@@ -64,7 +64,7 @@ def save_result(separator):
 
     i = 0
     yes_num = 0
-    with open('D:/Documents/SpeakerRecognition/Code/Model/mfcc-lstm/res/'+str(separator)+'-Result.csv', 'w', newline='') as f:
+    with open('D:/Documents/SpeakerRecognition/Code/Model/mfcc-lstm/res/'+str(separator)+'-Result-B.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         header = ["FILE_ID", "IS_FAMILY_MEMBER"]
         writer.writerow(header)
@@ -90,8 +90,8 @@ def save_result(separator):
 
 
 # method enhance just execute once
-enhance()
+# enhance()
 
-save_result(0.501565)
+save_result(0.501570)
 
 
