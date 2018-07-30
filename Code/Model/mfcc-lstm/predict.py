@@ -92,6 +92,6 @@ def save_result(separator):
 # method enhance just execute once
 # enhance()
 
-save_result(0.501571)
+save_result(0.501572)
 
 
